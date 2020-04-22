@@ -12,10 +12,12 @@ import Page404 from './pages/Page404'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Private from './routes/Private'
 import Public from './routes/Public'
+import Header from './organisms/Header'
 
 
 const App = () => (
   <Router>
+    <Header />
     <Switch>
       <Private path="/" exact component={Home} />
       <Private path="/especialidades" exact component={Specialities} />
@@ -30,7 +32,6 @@ const App = () => (
 
       <Route component={Page404} />
     </Switch>
-
   </Router>
 )
 

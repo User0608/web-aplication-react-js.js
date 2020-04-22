@@ -1,0 +1,43 @@
+[33mcommit 20e2a90d2ffff6338335bdd21dc4ba924fa1075a[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m)[m
+Author: Kevin Saucedo <user002_@outlook.com>
+Date:   Sun Apr 19 21:00:48 2020 -0500
+
+    Estructura de paginas definicion de router y route tanto privado como
+    publico
+
+[33mcommit de5c542755fe3c055f19b64ccd1a7b1392875ba7[m
+Author: Kevin Saucedo <user002_@outlook.com>
+Date:   Sun Apr 19 17:09:10 2020 -0500
+
+    Se instala node-sass y se importa el archivo syles.css en el index.js
+
+[33mcommit 323944f0083ebcc57268efe1d8fa99af62a8c24d[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Kevin Saucedo <user002_@outlook.com>
+Date:   Sun Apr 19 16:56:33 2020 -0500
+
+    Configuracion de las variables de entorno
+
+[33mcommit e39fdf2aa2f8bb30fec41bacc3387c7691d2d1a8[m
+Author: Kevin Saucedo <user002_@outlook.com>
+Date:   Sun Apr 19 16:41:10 2020 -0500
+
+    Creando y configurando el .editorconfig
+
+[33mcommit 1075df0b749b213b6bd78d2a39e19061e7b525c5[m
+Author: Kevin Saucedo <user002_@outlook.com>
+Date:   Sun Apr 19 16:32:19 2020 -0500
+
+    Estructura basica del projecto, eliminando archivos e implementaciones
+    que no se utilizaran.
+
+[33mcommit 85cf14ffbb8980f39312c5a5e9afa97b1defe23a[m
+Author: Kevin Saucedo <user002_@outlook.com>
+Date:   Sun Apr 19 16:19:57 2020 -0500
+
+    Se instalan las dependencias iniciales del proyecto
+
+[33mcommit 14c428f3f8739ac9321a7736071a21ae5acd9ab6[m
+Author: Kevin Saucedo <user002_@outlook.com>
+Date:   Sun Apr 19 15:59:08 2020 -0500
+
+    Initialize project using Create React App
