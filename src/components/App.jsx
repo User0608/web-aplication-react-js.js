@@ -26,10 +26,8 @@ const App = () => (
       <Private path="/cursos/:id" component={Course} />
       <Private path="/profesores" exact component={Teachers} />
       <Private path="/clases/:id" component={Clase} />
-
       <Public path="/login" exact component={Login} />
       <Public path="/registro" exact component={Register} />
-
       <Route component={Page404} />
     </Switch>
   </Router>

@@ -30,7 +30,7 @@ export const getAllSpecialities = () => dispach => {
       response => {
         return dispach({
           type: GET_ALL_SPECIALITIES,
-          especialities: response.data
+          specialities: response.data
         })
       })
 
@@ -48,16 +48,16 @@ export const getAllCourses = () => dispach => {
 
 }
 
-export const getAllTeacher = () => dispach => {
+export const getAllTeachers = () => dispach => {
   Axios.get(`${API_URL}/profesores`)
     .then(
       response => {
         return dispach({
           type: GET_ALL_TEACHERS,
-          posts: response.data
+          teachers: response.data
         })
       })
-
+    .catch((error) => console.log(error))
 }
 
 
@@ -75,7 +75,7 @@ export const getPost = id => dispach => {
 }
 
 export const getSpeciality = id => dispach => {
-  Axios.get(`${API_URL}/especialidades/${id}`)
+  Axios.get(`${API_URL}/especialidad/${id}`)
     .then(
       response => {
         return dispach({
@@ -83,12 +83,19 @@ export const getSpeciality = id => dispach => {
           speciality: response.data
         })
       })
+    .catch(
+      () => {
+        return dispach({
+          type: GET_SPECIALITY
+        })
+      }
+    )
 
 }
 
 
 export const getCourse = id => dispach => {
-  Axios.get(`${API_URL}/cursos/${id}`)
+  Axios.get(`${API_URL}/curso/${id}`)
     .then(
       response => {
         return dispach({
@@ -96,6 +103,13 @@ export const getCourse = id => dispach => {
           course: response.data
         })
       })
+    .catch(
+      (error) => {
+        return dispach({
+          type: GET_COURSE,
+        })
+      }
+    )
 
 }
 

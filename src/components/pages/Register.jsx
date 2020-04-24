@@ -1,5 +1,6 @@
 import React from 'react'
 import Axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const register = (e) => {
   e.preventDefault()
@@ -12,7 +13,6 @@ const register = (e) => {
         "email": form.email.value,
         "password": form.password.value
       }
-      console.log("______::::_")
       Axios.post(`${process.env.REACT_APP_API_USER}/signup`, data)
         .then(response => {
           alert("Registro exitoso")
@@ -73,6 +73,9 @@ export const Register = () => (
           <input type="submit" className="button full" value="Registrarse" />
         </div>
       </form>
+      <div className="center">
+        <p>¿Ya tienes una cuenta? <Link to="/registro">Iniciar secion</Link></p>
+      </div>
 
     </div>
 

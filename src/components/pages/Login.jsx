@@ -12,10 +12,11 @@ const authentication = (e) => {
   Axios.post(`${process.env.REACT_APP_API_USER}/login`, data)
     .then(response => {
       localStorage.setItem('token', response.data.token)
-      window.location = '/'
+      window.location.assign("/")
+
     })
     .catch(error => {
-      console.log("Error : ", error)
+      alert("Error al iniciar seción")
     })
 
 }
@@ -35,14 +36,16 @@ export const Login = () => (
         <div className="form__item">
           <label htmlFor="password">
             Contraseña
-              <input type="password" ip="password" name="password" placeholder="********" required />
+              <input type="password" id="password" name="password" placeholder="********" required />
           </label>
         </div>
         <div className="form__item">
           <input type="submit" className="button full" value="Iniciar sesión" />
         </div>
       </form>
-      <Link className="button ghost full" to="/registro"><span>Registrarse</span></Link>
+      <div className="center">
+        <p>¿No tienes una cuenta? <Link to="/registro">Registrarse</Link></p>
+      </div>
     </div>
   </div>
 )
