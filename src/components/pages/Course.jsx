@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import store from '../../redux/store'
 import { getCourse } from '../../redux/createAction'
 import Banner from '../organisms/Banner'
+import { Link } from 'react-router-dom'
 
 export const Course = ({ match, course }) => {
   useEffect(() => {
@@ -50,10 +51,14 @@ export const Course = ({ match, course }) => {
                   <div className="course-class l-section" key={key}>
                     <h3 className="s-mb-0">{cl.class.title}</h3>
                     <p>{cl.class.description}</p>
-                    <ul>
+                    <ul className="data-list">
                       {
                         cl.subjects.map((s, key) => (
-                          <li key={key}>{s.subject.title}</li>
+                          <li key={key}>
+                            <Link to={`/clase/${s.subject.id}`} className="color dark-color">
+                              {s.subject.title}
+                            </Link>
+                          </li>
                         ))
                       }
                     </ul>

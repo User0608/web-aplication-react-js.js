@@ -15,6 +15,7 @@ import Public from './routes/Public'
 import Header from './organisms/Header'
 
 
+
 const App = () => (
   <Router>
     <Header />
@@ -25,7 +26,7 @@ const App = () => (
       <Private path="/cursos" exact component={Courses} />
       <Private path="/cursos/:id" component={Course} />
       <Private path="/profesores" exact component={Teachers} />
-      <Private path="/clases/:id" component={Clase} />
+      <Private path="/clase/:id" component={Clase} />
       <Public path="/login" exact component={Login} />
       <Public path="/registro" exact component={Register} />
       <Route component={Page404} />

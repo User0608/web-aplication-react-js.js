@@ -8,7 +8,6 @@ const Private = ({ component: Component, ...rest }) => {
     return <Route {...rest} component={Component} />
   }
   return (
-    // <Route {...rest} render={Component} />
     <Redirect to="/login" />
   )
 }

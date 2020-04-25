@@ -115,7 +115,7 @@ export const getCourse = id => dispach => {
 
 
 export const getClass = id => dispach => {
-  Axios.get(`${API_URL}/clases/${id}`)
+  Axios.get(`${API_URL}/clase/${id}`)
     .then(
       response => {
         return dispach({
