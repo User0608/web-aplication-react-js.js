@@ -7,7 +7,7 @@ import Banner from '../organisms/Banner'
 const Speciality = ({ match, speciality }) => {
   useEffect(() => {
     store.dispatch(getSpeciality(match.params.id))
-  }, [])
+  }, [match])
 
   return (
     <>

@@ -4,11 +4,10 @@ import store from '../../redux/store'
 import { getCourse } from '../../redux/createAction'
 import Banner from '../organisms/Banner'
 
-export const Course = ({ course, match }) => {
+export const Course = ({ match, course }) => {
   useEffect(() => {
-    console.log("Data:===", match.params.id)
     store.dispatch(getCourse(match.params.id))
-  }, [])
+  }, [match])
   return (
     <>{
       course &&

@@ -20,6 +20,8 @@ export const postReducer = (state = {}, action) => {
     case GET_POST:
       data = { post: action.post }
       break
+    default:
+      break
   }
 
   return {
@@ -35,6 +37,8 @@ export const specialityReducer = (state = {}, action) => {
       break
     case GET_SPECIALITY:
       data = { speciality: action.speciality }
+      break
+    default:
       break
   }
   return {
@@ -52,6 +56,8 @@ export const courseReducer = (state = {}, action) => {
     case GET_COURSE:
       data = { course: action.course }
       break
+    default:
+      break
   }
   return {
     ...state, ...data
@@ -68,6 +74,8 @@ export const teacherReducer = (state = {}, action) => {
     case GET_TEACHER:
       data = { teacher: action.teacher }
       break
+    default:
+      break
   }
   return {
     ...state, ...data
@@ -79,6 +87,8 @@ export const classReducer = (state = {}, action) => {
   switch (action.type) {
     case GET_CLASS:
       data = { clase: action.clase }
+      break
+    default:
       break
   }
   return {
